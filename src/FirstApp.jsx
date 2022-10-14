@@ -1,9 +1,18 @@
-export const FirstApp = (props) => {
-    console.log(props);
+import PropTypes from 'prop-types';
+
+export const FirstApp = ({title, Subtitulo}) => {
+    // console.log(props);
+
+    
     return (
         <>
-        <h1>{props.title}</h1>
-        <p>Subtitulo</p>
+        <h1>{title}</h1>
+        <p>{Subtitulo}</p>
         </>
     )
+}
+
+FirstApp.propTypes = {
+    title: PropTypes.string.isRequired,
+    Subtitulo: PropTypes.number.isRequired
 }
